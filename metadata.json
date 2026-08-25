@@ -1,0 +1,6 @@
+{
+  "name": "Grupo SimetriS - Control Financiero de Obras",
+  "description": "Dashboard financiero para Grupo SimetriS: gestión de ingresos y egresos bimonetarios (ARS/USD), control presupuestario vs real, análisis de desvíos con peso específico, gestión de rubros e importador de Excel.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

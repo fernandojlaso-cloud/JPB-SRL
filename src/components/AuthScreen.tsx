@@ -335,10 +335,34 @@ export const AuthScreen: React.FC = () => {
               </div>
             </div>
 
+            {isRegistering && (
+              <div>
+                <label className="block text-xs font-semibold text-slate-300 mb-1.5 flex items-center justify-between">
+                  <span>Rol / Función Solicitada:</span>
+                  <span className="text-[10px] text-amber-400 font-normal">Requiere Aprobación</span>
+                </label>
+                <div className="relative">
+                  <Briefcase className="absolute left-3.5 top-3 h-4 w-4 text-slate-500" />
+                  <select
+                    value={requestedRole}
+                    onChange={(e) => setRequestedRole(e.target.value as UserRole)}
+                    className="w-full bg-slate-950 border border-slate-800 rounded-xl pl-10 pr-3.5 py-2.5 text-xs text-slate-100 focus:outline-none focus:border-amber-400 transition cursor-pointer appearance-none"
+                  >
+                    <option value="administrativo">💼 Administrativo (Carga de Ingresos, Egresos y Liquidaciones)</option>
+                    <option value="comitente">🏢 Comitente / Cliente (Solo Lectura de sus Obras Asignadas)</option>
+                    <option value="director">📋 Director de Proyecto (Administración y Control)</option>
+                  </select>
+                </div>
+                <p className="text-[11px] text-slate-400 mt-1">
+                  * El rol definitivo y las obras asignadas serán configuradas al aprobarse la cuenta.
+                </p>
+              </div>
+            )}
+
             <button
               type="submit"
               disabled={isSubmitting || isGoogleSubmitting}
-              className="w-full mt-2 py-3 px-4 bg-slate-800 hover:bg-slate-700 text-slate-200 font-bold rounded-xl text-sm transition border border-slate-700 flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50"
+              className="w-full mt-2 py-3 px-4 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-slate-950 font-bold rounded-xl text-sm transition shadow-lg shadow-amber-500/20 flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50"
             >
               <span>{isSubmitting ? 'Procesando...' : isRegistering ? 'Crear Cuenta y Solicitar Aprobación' : 'Ingresar con Correo'}</span>
               <ArrowRight className="h-4 w-4" />

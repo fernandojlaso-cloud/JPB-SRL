@@ -1,8 +1,9 @@
-# Grupo SimetriS • Sistema de Control Financiero de Obras
+# JPB SRL • Sistema de Control Financiero de Obras & Gestión de Fondos
 
 [![App Live Preview](https://img.shields.io/badge/App_En_Línea-Online-emerald?style=for-the-badge&logo=google-cloud)](https://ais-pre-gno62cuvzjovqy6a34kgtz-839645878130.us-east1.run.app)
 [![Bimonetary ARS/USD](https://img.shields.io/badge/Divisas-ARS_%2F_USD-amber?style=for-the-badge)](https://ais-pre-gno62cuvzjovqy6a34kgtz-839645878130.us-east1.run.app)
-[![React Vite](https://img.shields.io/badge/Stack-React_18_+_TypeScript_+_Tailwind-blue?style=for-the-badge&logo=react)](https://ais-pre-gno62cuvzjovqy6a34kgtz-839645878130.us-east1.run.app)
+[![React Vite](https://img.shields.io/badge/Stack-React_19_+_TypeScript_+_Tailwind-blue?style=for-the-badge&logo=react)](https://ais-pre-gno62cuvzjovqy6a34kgtz-839645878130.us-east1.run.app)
+[![Firebase Cloud Sync](https://img.shields.io/badge/Cloud-Firestore_Sync-orange?style=for-the-badge&logo=firebase)](https://ais-pre-gno62cuvzjovqy6a34kgtz-839645878130.us-east1.run.app)
 
 ---
 
@@ -17,11 +18,11 @@
 
 ---
 
-## 🏗️ Acerca del Proyecto
+## 🏗️ Acerca de JPB SRL
 
-**Grupo SimetriS - Control Financiero de Obras** es una plataforma integral desarrollada para la administración, auditoría presupuestaria y control de flujo de fondos en proyectos de construcción y arquitectura.
+**JPB SRL - Sistema Integral de Control Financiero de Obras** es una plataforma corporativa desarrollada para la administración, auditoría presupuestaria, liquidación y control de flujo de fondos en proyectos de construcción y arquitectura.
 
-El sistema resuelve la complejidad del manejo financiero bimonetario en obras (Pesos Argentinos `$ ARS` y Dólares Estadounidenses `u$s USD`), permitiendo el seguimiento exacto de aportes, liquidaciones de mano de obra, compras de materiales y análisis de desvíos en tiempo real con ponderación por peso específico.
+El sistema resuelve la complejidad del manejo financiero bimonetario en obras (Pesos Argentinos `$ ARS` y Dólares Estadounidenses `u$s USD`), permitiendo el seguimiento exacto de aportes de comitentes, liquidaciones de mano de obra, compras de materiales, control de cajas/bancos y análisis de desvíos en tiempo real con ponderación por peso específico.
 
 ---
 
@@ -36,7 +37,7 @@ El sistema resuelve la complejidad del manejo financiero bimonetario en obras (P
 ### 2. 🔴 Aplicación de Fondos (Egresos & Costos)
 - Clasificación por rubros: **Mano de Obra (M.O.)**, **Materiales & Acopios**, **Honorarios y Dirección Técnica**, **Derechos y Permisos Municipales**, **Volquetes & Fletes**, **Subcontratos** e **Imprevistos**.
 - Resumen visual con gráficos de barras y torta para análisis inmediato de costos.
-- Filtros interactivos por rubro y fecha de comprobante.
+- Filtros interactivos por rubro, fecha y método de pago.
 
 ### 3. ⚖️ Presupuesto vs. Real y Tablero de Desvíos (Peso Específico)
 - Matriz de control presupuestario: Compara lo **Presupuestado** vs. **Real Ejecutado** con cálculo automático de desvío ($ y %).
@@ -47,14 +48,17 @@ El sistema resuelve la complejidad del manejo financiero bimonetario en obras (P
   - 🔴 **Desvío Crítico:** Rubros con sobrecostos o desvíos estructurales (> 100%).
 - Calibrador en línea de presupuestos por partida.
 
-### 4. 🌐 Consolidado Macro (Visión Ejecutiva)
+### 4. 🌐 Consolidado Macro (Visión Ejecutiva de Obras)
 - Panel directivo con visión transversal de todas las obras activas (*Casa Mily y Fer Caracas 2672*, *Edificio Las Heras*, *Casa de Campo Pilar*, etc.).
 - Comparativa lado a lado de Ingresos vs. Egresos vs. Presupuesto Global.
 - Indicadores de margen operativo y estado de avance porcentual.
 
-### 5. ⚙️ Plan de Cuentas & Configuración (Back)
-- Gestión completa de rubros contables: creación, edición de códigos, colores identificadores y descripciones.
-- Alta y parametrización de nuevas obras (código, comitente, tipo de cambio base, presupuestos en ARS y USD).
+### 5. 👥 Control de Usuarios, Roles & Permisos (RBAC)
+- **Superadministrador Maestro** (`fernandoj.laso@gmail.com`): Control total, aprobación de usuarios y asignación de obras.
+- **Director de Proyecto**: Supervisión general y administración técnica.
+- **Administrativo**: Carga de comprobantes, ingresos y egresos.
+- **Comitente / Cliente**: Acceso restringido exclusivamente a las obras asignadas para auditoría transparente.
+- **Autenticación Dual**: Ingreso en 1 Clic con Google o registro con correo y contraseña protegidos.
 
 ### 6. 📊 Integración con Excel (.xlsx / .csv)
 - **Importador Inteligente:** Carga masiva de comprobantes arrastrando planillas Excel con previsualización y validación previa.
@@ -69,9 +73,10 @@ El sistema resuelve la complejidad del manejo financiero bimonetario en obras (P
 
 ## 🛠️ Tecnologías Utilizadas
 
-- **Frontend:** [React 18](https://react.dev/) + [TypeScript](https://www.typescriptlang.org/)
+- **Frontend:** [React 19](https://react.dev/) + [TypeScript](https://www.typescriptlang.org/)
 - **Empaquetador:** [Vite](https://vitejs.dev/)
 - **Estilos & UI:** [Tailwind CSS](https://tailwindcss.com/)
+- **Base de Datos & Auth:** [Google Cloud Firestore](https://firebase.google.com/)
 - **Iconografía:** [Lucide React](https://lucide.dev/)
 - **Visualización de Datos & Gráficos:** [Recharts](https://recharts.org/)
 - **Procesamiento de Hojas de Cálculo:** [SheetJS (XLSX)](https://sheetjs.com/)
@@ -88,7 +93,7 @@ Para correr el proyecto en un entorno local:
 git clone <URL_DEL_REPOSITORIO>
 
 # 2. Ingresar a la carpeta del proyecto
-cd obrafin-simetris
+cd jpb-srl-obras
 
 # 3. Instalar las dependencias
 npm install
@@ -111,4 +116,4 @@ La aplicación se ejecutará localmente en `http://localhost:3000`.
 
 ## 🏢 Créditos & Empresa
 
-Desarrollado para **Grupo SimetriS** — Control de Gestión, Arquitectura y Construcción.
+Desarrollado para **JPB SRL** — Sistema Integral de Control Financiero de Obras & Gestión de Fondos.

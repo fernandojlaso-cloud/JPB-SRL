@@ -58,7 +58,7 @@ El sistema resuelve la complejidad del manejo financiero bimonetario en obras (P
 - **Director de Proyecto**: Supervisión general y administración técnica.
 - **Administrativo**: Carga de comprobantes, ingresos y egresos.
 - **Comitente / Cliente**: Acceso restringido exclusivamente a las obras asignadas para auditoría transparente.
-- **Autenticación Dual**: Ingreso en 1 Clic con Google o registro con correo y contraseña protegidos.
+- **Motor Propio de Autenticación**: Registro y login con contraseñas seguras cifradas con SHA-256 sin dependencia de popups de terceros.
 
 ### 6. 📊 Integración con Excel (.xlsx / .csv)
 - **Importador Inteligente:** Carga masiva de comprobantes arrastrando planillas Excel con previsualización y validación previa.
@@ -93,7 +93,7 @@ Para correr el proyecto en un entorno local:
 git clone <URL_DEL_REPOSITORIO>
 
 # 2. Ingresar a la carpeta del proyecto
-cd jpb-srl-obras
+cd jpb-srl-control-financiero
 
 # 3. Instalar las dependencias
 npm install

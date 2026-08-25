@@ -87,6 +87,19 @@
         "approvedBy": { "type": "string" }
       },
       "required": ["uid", "email", "role", "status"]
+    },
+    "AuthAccount": {
+      "title": "AuthAccount",
+      "description": "Credenciales y hashes criptográficos de cuentas del sistema propio",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string" },
+        "email": { "type": "string" },
+        "name": { "type": "string" },
+        "passwordHash": { "type": "string" },
+        "createdAt": { "type": "string" }
+      },
+      "required": ["uid", "email", "passwordHash"]
     }
   },
   "firestore": {
@@ -109,6 +122,10 @@
     "/users/{userId}": {
       "schema": "UserProfile",
       "description": "Colección de usuarios, roles y autorizaciones"
+    },
+    "/auth_accounts/{accountId}": {
+      "schema": "AuthAccount",
+      "description": "Colección de credenciales y hashes de cuentas registradas"
     }
   }
 }

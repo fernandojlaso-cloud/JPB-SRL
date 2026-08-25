@@ -19,6 +19,7 @@ import {
   AlertTriangle,
   FolderDown
 } from 'lucide-react';
+import { GrupoSimetrisLogo } from './GrupoSimetrisLogo';
 import { JpbSrlLogo } from './JpbSrlLogo';
 
 interface UserManualModalProps {

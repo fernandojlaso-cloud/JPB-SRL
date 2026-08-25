@@ -20,7 +20,6 @@ import {
 } from 'lucide-react';
 import { Project, Currency } from '../types';
 import { formatCurrency } from '../utils/formatters';
-import { GrupoSimetrisLogo } from './GrupoSimetrisLogo';
 import { JpbSrlLogo } from './JpbSrlLogo';
 import { useAuth } from '../contexts/AuthContext';
 
@@ -252,9 +251,7 @@ export const Header: React.FC<HeaderProps> = ({
               currentProject && (
                 <>
                   <div className="flex items-center gap-2 font-bold text-slate-100 text-sm">
-                    {currentProject.name.toUpperCase().includes('JPB') ? (
-                      <JpbSrlLogo variant="badge" size="sm" />
-                    ) : null}
+                    <JpbSrlLogo variant="compact" />
                     <span>{currentProject.name}</span>
                     <span className="text-slate-500 text-xs">({currentProject.code})</span>
                   </div>
